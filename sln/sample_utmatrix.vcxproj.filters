@@ -10,7 +10,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\tmatrix.h">
+    <ClInclude Include="..\include\tqueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

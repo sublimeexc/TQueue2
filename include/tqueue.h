@@ -24,6 +24,7 @@ public:
     TStack(const TStack& s);
     TStack(TStack&& s);
     ~TStack();
+    size_t size();
     void Push(T elem);
     T Pop();
     TStack& operator=(TStack& s);
@@ -84,6 +85,23 @@ TStack<T>::~TStack()
         pMem = nullptr;
     }
     top = -1;
+}
+template<class T>
+size_t TStack<T>::size()
+{
+    return top+1;
+}
+
+template<class T>
+bool TStack<T>::IsEmpty()
+{
+    return top==-1;
+}
+
+template<class T>
+bool TStack<T>::IsFull()
+{
+    return top==sz-1;
 }
 
 template<class T>
@@ -150,16 +168,162 @@ protected:
     T* tail;
 public:
     TQueue();
-    TQueue();
-    TQueue();
-    TQueue();
-    TQueue();
-    TQueue();
+    TQueue(size_t size);
+    TQueue(const TQueue& s);
+    TQueue(TQueue&& s);
+    ~TQueue();
+    size_t size();
+    bool IsFull();
+    bool IsEmpty();
     void Push(T elem);
-    void Pop(T elem);
+    T Pop();
     TQueue& operator=(TQueue& q);
     bool operator==(const TQueue q);
     bool operator!=(const TQueue q);
 };
 
+template<class T>
+TQueue<T>::TQueue()
+{
+    sz = 0;
+    pMem = nullptr;
+    head = nullptr;
+    tail = nullptr;
+}
+
+template<class T>
+TQueue<T>::TQueue(size_t size)
+{
+    if (size < 0)
+    {
+        throw std::exception();
+    }
+    TQueue();
+    sz = size;
+    pMem = new T[size];
+}
+
+template<class T>
+TQueue<T>::TQueue(const TQueue& s)
+{
+    sz = s.sz;
+    pMem = new T[size];
+    if (pMem != nullptr)
+    {
+        for (int i = 0; i < sz; i++)
+        {
+            pMem[i] = s.pMem[i];
+        }
+    }
+    head = s.head;
+    tail = s.tail;
+}
+
+template<class T>
+TQueue<T>::TQueue(TQueue&& s)
+{
+    sz = s.sz;
+    pMem = s.pMem;
+    head = s.head;
+    tail = s.tail;
+    s.pMem = nullptr;
+    s.head = nullptr;
+    s.tail = nullptr;
+    s.sz = 0;
+}
+
+template<class T>
+TQueue<T>::~TQueue()
+{
+    sz = 0;
+    if (pMem != nullptr)
+    {
+        delete[] pMem;
+        pMem = nullptr;
+    }
+    head = nullptr;
+    tail = nullptr;
+}
+template<class T>
+size_t TQueue<T>::size()
+{
+    return head-tail;
+}
+
+template<class T>
+bool TQueue<T>::IsEmpty()
+{
+    return head == tail;
+}
+
+template<class T>
+bool TQueue<T>::IsFull()
+{
+    return head == size;
+}
+template<class T>
+void TQueue<T>::Push(T elem)
+{
+    if (isFull() || pMem == nullptr) throw std::exception();
+    if (head == sz)
+    {
+        *tail = elem;
+        tail++;
+    }
+    else
+    {
+        *head = elem;
+        head--;
+    }
+    top++;
+}
+template<class T>
+T Pop()
+{
+    if (IsEmpty()) 
+    {
+        throw std::exception("Queue is empty");
+    }
+
+    T elem = *head;
+    head++;
+    return elem;
+}
+
+template<class T>
+TQueue<T>& TQueue<T>::operator=(TQueue& s)
+{
+    if (this != &s)
+    {
+        delete[] pMem;
+        head = s.head;
+        tail = s.tail;
+        sz = s.sz;
+        if (sz == 0)
+        {
+            pMem = nullptr;
+        }
+        else
+        {
+            pMem = new T[size];
+            for (int i = 0; i < sz; i++)
+            {
+                pMem[i] = s.pMem[i];
+            }
+        }
+    }
+    return *this;
+}
+
+template<class T>
+bool TQueue<T>::operator==(const TQueue s)
+{
+    return (sz == s.sz && pMem == s.pMem && head == s.head && tail == s.tail);
+}
+
+template<class T>
+bool TQueue<T>::operator!=(const TQueue s)
+{
+    return !(this == s);
+}
 #endif

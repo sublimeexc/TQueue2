@@ -96,7 +96,7 @@
     <ClInclude Include="..\include\tqueue.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\samples\sample_matrix.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

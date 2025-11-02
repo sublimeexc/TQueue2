@@ -1,3 +1,6 @@
+# Google Test framework
+gtest/
+
 # Prerequisites
 *.d
 
@@ -39,3 +42,12 @@
 
 # debug information files
 *.dwo
+
+# others
+*.txt
+*.vsidx
+*.json
+*.ipch
+*.tlog
+*.vcxproj
+*.sln

@@ -287,19 +287,20 @@ inline T TStack<T>::Pop()
 template<class T>
 inline TStack<T>& TStack<T>::operator=(const TStack& s)
 {
-    if (this == &s) {
-        return *this; // Защита от самоприсваивания
+    if (this == &s) 
+    {
+        return *this;
     }
 
-    // Очищаем текущие данные
-    if (isNew && data != nullptr) {
-        for (int i = 0; i < len; i++) {
+    if (isNew && data != nullptr) 
+    {
+        for (int i = 0; i < len; i++) 
+        {
             delete data[i];
         }
         delete[] data;
     }
 
-    // Копируем данные из s
     len = s.len;
     top = s.top;
     isNew = true;
@@ -319,7 +320,8 @@ inline TStack<T>& TStack<T>::operator=(const TStack& s)
             }
         }
     }
-    else {
+    else 
+    {
         data = nullptr;
     }
 
@@ -334,7 +336,6 @@ inline TStack<T>& TStack<T>::operator=(TStack&& s)
         return *this;
     }
 
-    // Очищаем текущие данные
     if (isNew && data != nullptr) 
     {
         for (int i = 0; i < len; i++) 
@@ -360,25 +361,21 @@ inline TStack<T>& TStack<T>::operator=(TStack&& s)
 template<class T>
 inline bool TStack<T>::operator==(const TStack& s) const
 {
-    // Проверка на самосравнение
     if (this == &s) 
     {
         return true;
     }
 
-    // Сравниваем основные параметры
     if (len != s.len || top != s.top) 
     {
         return false;
     }
 
-    // Сравниваем содержимое данных
     for (int i = 0; i < len; i++) {
         if (data[i] == nullptr && s.data[i] == nullptr)
         {
             continue;
         }
-        // Один nullptr, а другой нет - не равны
         if (data[i] == nullptr || s.data[i] == nullptr)
         {
             return false;
@@ -449,9 +446,9 @@ protected:
     T** data;
     int len;
     bool isNew;
-    int head; // индекс первого элемента
-    int tail; // индекс следующего за последним элементом
-    int count; // количество элементов в очереди
+    int head;
+    int tail;
+    int count;
 public:
     TQueue();
     TQueue(int len_);
@@ -563,7 +560,6 @@ inline TQueue<T>::TQueue(T** data_, int len_) : TQueue<T>::TQueue()
         data = data_;
         isNew = false;
 
-        // Подсчитываем количество элементов и находим head/tail
         count = 0;
         for (int i = 0; i < len; i++)
         {
@@ -575,7 +571,6 @@ inline TQueue<T>::TQueue(T** data_, int len_) : TQueue<T>::TQueue()
         }
         if (count > 0)
         {
-            // Находим первый не-nullptr элемент
             for (int i = 0; i < len; i++)
             {
                 if (data[i] != nullptr)
@@ -659,8 +654,6 @@ inline void TQueue<T>::Resize(int newsize)
         {
             newData[i] = nullptr;
         }
-
-        // Копируем существующие элементы
         int newCount = 0;
         int newHead = 0;
         int newTail = 0;
@@ -677,7 +670,6 @@ inline void TQueue<T>::Resize(int newsize)
             newTail = newCount;
         }
 
-        // Очищаем старые данные
         if (isNew && data != nullptr)
         {
             for (int i = 0; i < len; i++)
@@ -738,7 +730,6 @@ inline void TQueue<T>::SetData(T** data_, int len_)
         len = len_;
         isNew = false;
 
-        // Подсчитываем элементы и находим head/tail
         count = 0;
         for (int i = 0; i < len; i++)
         {
@@ -750,7 +741,6 @@ inline void TQueue<T>::SetData(T** data_, int len_)
 
         if (count > 0)
         {
-            // Находим head (первый не-nullptr)
             for (int i = 0; i < len; i++)
             {
                 if (data[i] != nullptr)
@@ -759,7 +749,6 @@ inline void TQueue<T>::SetData(T** data_, int len_)
                     break;
                 }
             }
-            // Находим tail (следующий за последним)
             tail = (head + count) % len;
         }
         else
@@ -780,7 +769,7 @@ inline T* TQueue<T>::RemoveFromHead()
 
     T* result = data[head];
     data[head] = nullptr;
-    head = (head + 1) % len; // Двигаем head вперед
+    head = (head + 1) % len;
     count--;
     return result;
 }
@@ -794,26 +783,25 @@ inline void TQueue<T>::AddToTail(T elem)
     }
 
     data[tail] = new T(elem);
-    tail = (tail + 1) % len; // Двигаем tail вперед
+    tail = (tail + 1) % len;
     count++;
 }
 
 template<class T>
 inline TQueue<T>& TQueue<T>::operator=(const TQueue& s)
 {
-    if (this == &s) {
+    if (this == &s) 
+    {
         return *this;
     }
-
-    // Очищаем текущие данные
-    if (isNew && data != nullptr) {
-        for (int i = 0; i < len; i++) {
+    if (isNew && data != nullptr) 
+    {
+        for (int i = 0; i < len; i++) 
+        {
             delete data[i];
         }
         delete[] data;
     }
-
-    // Копируем данные из s
     len = s.len;
     head = s.head;
     tail = s.tail;
@@ -849,8 +837,6 @@ inline TQueue<T>& TQueue<T>::operator=(TQueue&& s)
     {
         return *this;
     }
-
-    // Очищаем текущие данные
     if (isNew && data != nullptr)
     {
         for (int i = 0; i < len; i++)
@@ -889,8 +875,6 @@ inline bool TQueue<T>::operator==(const TQueue& s) const
     {
         return false;
     }
-
-    // Сравниваем элементы в порядке очереди
     int current1 = head;
     int current2 = s.head;
     for (int i = 0; i < count; i++)

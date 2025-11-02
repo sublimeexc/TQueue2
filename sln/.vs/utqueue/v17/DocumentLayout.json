@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\sln\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C650C93E-F0A7-4235-9F5F-0DCE78609BFB}|test_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C650C93E-F0A7-4235-9F5F-0DCE78609BFB}|test_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tstack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C650C93E-F0A7-4235-9F5F-0DCE78609BFB}|test_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tqueue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C650C93E-F0A7-4235-9F5F-0DCE78609BFB}|test_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tstack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C650C93E-F0A7-4235-9F5F-0DCE78609BFB}|test_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D381BB01-F279-4EEE-A822-7F90B9E432E8}|sample_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\include\\tqueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D381BB01-F279-4EEE-A822-7F90B9E432E8}|sample_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\sln\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D381BB01-F279-4EEE-A822-7F90B9E432E8}|sample_utmatrix.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D381BB01-F279-4EEE-A822-7F90B9E432E8}|sample_utmatrix.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\include\\tqueue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60932AFC-7808-48B7-B3BF-F2BC151C0065}|gtest.vcxproj|C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\gtest\\gtest-all.cc||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -32,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\sln\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -68,7 +68,8 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-02T08:27:47.102Z"
+              "WhenOpened": "2025-11-02T08:27:47.102Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -78,25 +79,27 @@
               "RelativeDocumentMoniker": "..\\test\\test_tqueue.cpp",
               "ToolTip": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tqueue.cpp",
               "RelativeToolTip": "..\\test\\test_tqueue.cpp",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAOwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-02T08:26:38.295Z"
+              "WhenOpened": "2025-11-02T08:26:38.295Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "test_tstack.cpp",
               "DocumentMoniker": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tstack.cpp",
               "RelativeDocumentMoniker": "..\\test\\test_tstack.cpp",
               "ToolTip": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_tstack.cpp",
               "RelativeToolTip": "..\\test\\test_tstack.cpp",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-02T08:25:21.771Z"
+              "WhenOpened": "2025-11-02T08:25:21.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "test_main.cpp",
               "DocumentMoniker": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\test\\test_main.cpp",
               "RelativeDocumentMoniker": "..\\test\\test_main.cpp",
@@ -109,15 +112,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "tqueue.h",
               "DocumentMoniker": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\include\\tqueue.h",
               "RelativeDocumentMoniker": "..\\include\\tqueue.h",
               "ToolTip": "C:\\Users\\Anntuu\\Desktop\\unnwork\\TQueue2\\include\\tqueue.h",
               "RelativeToolTip": "..\\include\\tqueue.h",
-              "ViewState": "AgIAALEDAAAAAAAAAAAAAK4DAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYCAAAAAAAAAAAAAJ8CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-22T11:58:20.988Z"
+              "WhenOpened": "2025-10-22T11:58:20.988Z",
+              "EditorCaption": ""
             }
           ]
         }
